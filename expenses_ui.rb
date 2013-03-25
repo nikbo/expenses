@@ -52,8 +52,10 @@ def add
     puts "#{expense.name} has been saved!"
   else
     puts 'something went wrong'
+    expense.errors.full_messages.each {|message| puts message}
   end
 end
+
 
 
 def list_all
